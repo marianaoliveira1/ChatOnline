@@ -1,4 +1,5 @@
 import 'package:chat/constants.dart';
+import 'package:chat/screens/sigininOrSignUp/signin_or_signup_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,7 +28,12 @@ class WelcomeScreen extends StatelessWidget {
             Spacer(flex: 3,),
             FittedBox(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SigninOrSignupScreen(),
+                  )
+                ),
                 child: Row(
                   children: [
                     Text("Skip",
